@@ -12,18 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="shortcut icon" href="./img/set.svg" type="image/x-icon">
     <title>FocousTimer - Pomodoro</title>
 </head>
 
 <body>
     <main>
-        <div class="timer">
+        <div id="timer">
             <span class="minutes">25</span>
             <span>:</span>
             <span class="seconds">00</span>
         </div>
-        <div class="controls">
+        <div id="controls">
             <button class="play">
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -34,7 +34,7 @@
                         fill="#42D3FF" />
                 </svg>
             </button>
-            <button class="pause">
+            <button class="pause hide">
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M6 32C6 17.6454 17.6454 6 32 6C46.3546 6 58 17.6454 58 32C58 46.3546 46.3546 58 32 58C17.6454 58 6 46.3546 6 32ZM32 10C19.8546 10 10 19.8546 10 32C10 44.1454 19.8546 54 32 54C44.1454 54 54 44.1454 54 32C54 19.8546 44.1454 10 32 10Z"
@@ -47,7 +47,7 @@
                         fill="#42D3FF" />
                 </svg>
             </button>
-            <button class="stop">
+            <button class="stop hide">
                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M6 32C6 17.6454 17.6454 6 32 6C46.3546 6 58 17.6454 58 32C58 46.3546 46.3546 58 32 58C17.6454 58 6 46.3546 6 32ZM32 10C19.8546 10 10 19.8546 10 32C10 44.1454 19.8546 54 32 54C44.1454 54 54 44.1454 54 32C54 19.8546 44.1454 10 32 10Z"
@@ -76,7 +76,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M48.9926 16.2723C49.9468 15.7159 51.1714 16.0384 51.7277 16.9926C54.3508 21.4912 56 25.5505 56 32C56 38.4594 54.279 42.5547 51.7354 46.9943C51.1862 47.9527 49.9642 48.2845 49.0057 47.7354C48.0473 47.1862 47.7155 45.9641 48.2646 45.0057C50.591 40.9453 52 37.5406 52 32C52 26.4495 50.6492 23.0838 48.2723 19.0074C47.7159 18.0532 48.0384 16.8286 48.9926 16.2723Z" fill="#42D3FF"/>
                 </svg>  
         </button>
-        <button class="soundOff">
+        <button class="soundOff hide">
             <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.58579 8.58579C7.36683 7.80474 8.63317 7.80474 9.41421 8.58579L53.4142 52.5858C54.1953 53.3668 54.1953 54.6332 53.4142 55.4142C52.6332 56.1953 51.3668 56.1953 50.5858 55.4142L6.58579 11.4142C5.80474 10.6332 5.80474 9.36683 6.58579 8.58579Z" fill="white"/>
                 <path d="M28 17.115V21.34C28.0002 21.4722 28.0528 21.599 28.1462 21.6925L31.1462 24.6925C31.2161 24.7624 31.3051 24.8101 31.402 24.8295C31.499 24.8488 31.5995 24.839 31.6908 24.8013C31.7822 24.7636 31.8603 24.6996 31.9153 24.6175C31.9704 24.5354 31.9998 24.4388 32 24.34V15.0713C32.0056 14.5179 31.8613 13.9734 31.5825 13.4954C31.3036 13.0174 30.9007 12.6238 30.4163 12.3562C29.917 12.0875 29.3517 11.9664 28.7862 12.0069C28.2207 12.0474 27.6783 12.2479 27.2225 12.585C27.1939 12.6048 27.1664 12.6261 27.14 12.6488L23.1475 15.9175C23.0936 15.9618 23.0495 16.0169 23.0181 16.0792C22.9868 16.1415 22.9688 16.2098 22.9654 16.2795C22.962 16.3492 22.9732 16.4188 22.9983 16.4839C23.0234 16.549 23.0619 16.6082 23.1112 16.6575L25.2425 18.79C25.3304 18.8778 25.4478 18.9298 25.5718 18.9358C25.6959 18.9418 25.8178 18.9014 25.9137 18.8225L28 17.115Z" fill="white"/>
@@ -87,6 +87,7 @@
                 </svg>                
         </button>
     </footer>
+    <script src="./app.js"></script>
 </body>
 
 </html>
