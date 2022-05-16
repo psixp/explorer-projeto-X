@@ -42,7 +42,7 @@ main {
 
 #timer {
     font-size: clamp(4rem, 2rem + 12vw, 8.8rem);
-
+    font-weight: 700;
     display: flex;
     margin-bottom: 1.6rem;
 }
