@@ -6,13 +6,13 @@ import {elements} from "./elements.js"
 
 import Sound from "./sound.js"
 
+import Events from "./events.js"
+
 const {
     buttonPlay,
     buttonPause,
     buttonStop,
     buttonSet,
-    buttonSoundOff,
-    buttonSoundOn,
     displayMinutes,
     displaySeconds} = elements
 
@@ -31,47 +31,7 @@ const timer = Timer({
 
 const sound = Sound()
 
+Events({controls, sound, timer})
 
-// Event-Driven
 
-buttonPlay.addEventListener('click', () => {
-    controls.play()
-    timer.countdown()
-    sound.pressButton()
-})
 
-buttonPause.addEventListener('click', () => {
-    controls.pause()
-    timer.hold()
-    sound.pressButton()
-
-})
-
-buttonStop.addEventListener('click', () => {
-    controls.reset()
-    timer.reset()
-    sound.pressButton()
-})
-
-buttonSoundOff.addEventListener('click', () => {
-    buttonSoundOn.classList.remove('hide')
-    buttonSoundOff.classList.add('hide')
-    sound.bgAudio.pause()
-})
-
-buttonSoundOn.addEventListener('click', () => {
-    buttonSoundOff.classList.remove('hide')
-    buttonSoundOn.classList.add('hide')
-    sound.bgAudio.play()
-})
-
-buttonSet.addEventListener('click', () => {
-    let newMinutes = controls.getMinutes()
-
-    if (!newMinutes) {
-        timer.reset()
-        return
-    }
-    timer.updateDisplay(newMinutes, 0)
-    timer.updateMinutes(newMinutes)
-})
