@@ -8,13 +8,13 @@ const displayMinutes = document.querySelector('.minutes')
 const displaySeconds = document.querySelector('.seconds')
 
 
-export const elements ={
-    buttonPlay,
-    buttonPause,
-    buttonStop,
-    buttonSet,
-    buttonSoundOff,
-    buttonSoundOn,
-    displayMinutes,
+export {
+    buttonPlay, 
+    buttonPause, 
+    buttonStop, 
+    buttonSet, 
+    buttonSoundOff, 
+    buttonSoundOn, 
+    displayMinutes, 
     displaySeconds
 }
